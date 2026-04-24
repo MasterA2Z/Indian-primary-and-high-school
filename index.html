@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Indian Primary And High School</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="1000268599-removebg-preview.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="1000268599-removebg-preview.png"/>
+    <link rel="apple-touch-icon" href="1000268599-removebg-preview.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
+    <style>
+
+      /* CONTAINER STYLING */
+        .admission-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 15px;
+            box-sizing: border-box;
+        }
+
+        .admission-item {
+            background: #0f172a;
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            min-height: 60px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+            position: relative;
+        }
+
+        /* GOLDEN BADGE */
+        .gold-badge {
+            background: linear-gradient(90deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+            color: #000;
+            font-weight: 800;
+            font-size: 12px;
+            padding: 0 20px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            white-space: nowrap;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* TICKER SECTION */
+        .admission-ticker {
+            flex-grow: 1;
+            overflow: hidden;
+            white-space: nowrap;
+            color: #f8fafc;
+            font-family: sans-serif;
+            font-size: 14px;
+        }
+
+        .admission-ticker span {
+            display: inline-block;
+            padding-left: 100%;
+            animation: ticker-move 20s linear infinite;
+        }
+
+        @keyframes ticker-move {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-100%, 0, 0); }
+        }
+
+        /* BUTTON */
+        .apply-now {
+            background: #6366f1;
+            color: white !important;
+            text-decoration: none;
+            font-family: sans-serif;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 8px;
+            margin: 0 15px;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            text-align: center;
+        }
+
+        .apply-now:hover {
+            background: #4f46e5;
+            transform: scale(1.05);
+        }
+
+        /* MOBILE RESPONSIVENESS */
+        @media (max-width: 600px) {
+            .admission-item {
+                flex-direction: column;
+                height: auto;
+                padding-bottom: 15px;
+                text-align: center;
+            }
+
+            .gold-badge {
+                width: 100%;
+                height: 40px;
+                margin-bottom: 10px;
+            }
+
+            .admission-ticker {
+                width: 100%;
+                margin-bottom: 15px;
+                font-size: 13px;
+            }
+
+            .apply-now {
+                width: 80%;
+                margin: 0 auto;
+            }
+        }
+
+      
+      
+      .section,
+      .staff-card,
+      .principal-card {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: 0.6s ease;
+      }
+
+      .logo {
+        width: 250px;
+        height: auto;
+        display: block;
+        margin: 0 auto 10px;
+      }
+
+      /* Tablet */
+      @media (max-width: 768px) {
+        .logo {
+          width: 80px;
+        }
+      }
+
+      /* Mobile (strict control) */
+      @media (max-width: 480px) {
+        .logo {
+          width: 60px !important; /* force small */
+          max-width: 60px;
+        }
+      }
+
+      /* ===== EASY EDIT OPTIONS ===== */
+      :root {
+        --main-color: #004aad;
+        --secondary-color: #00c6ff;
+        --accent-color: #ffcc00;
+        --text-color: #333;
+        --card-radius: 15px;
+      }
+
+      /* ============================ */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Segoe UI, sans-serif;
+      }
+
+      body {
+        background: linear-gradient(120deg, var(--secondary-color), #f0f8ff);
+        color: var(--text-color);
+        overflow-x: hidden; /* Prevents side-scrolling on mobile */
+      }
+
+      /* HERO SECTION */
+
+      .hero_1 {
+        margin-top: 0; /* Adjusted for better spacing */
+        margin-bottom: 5px;
+        text-align: center;
+      }
+
+      /* New code for mobile responsiveness */
+      @media screen and (max-width: 768px) {
+        .hero_1 img {
+          max-width: 80%; /* Prevents the logo from being too large on small screens */
+          height: auto; /* Maintains the original aspect ratio */
+          display: block;
+          margin: 0 auto; /* Keeps it centered */
+        }
+      }
+
+      .hero {
+        position: relative;
+        overflow: hidden;
+        color: white;
+        text-align: center;
+        padding: 40px 15px;
+        min-height: 60vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      /* Background layer */
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)),
+          url("intro main img.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: -1;
+
+        /* IMPORTANT: reduced zoom */
+        animation: zoomHero 20s ease-in-out infinite alternate;
+      }
+
+      @keyframes zoomHero {
+        0% {
+          transform: scale(1);
+        }
+        100% {
+          transform: scale(1.05); /* SMALL zoom only */
+        }
+      }
+
+      @media (max-width: 600px) {
+        .hero::before {
+          animation: none; /* 🔴 STOP animation on mobile */
+          background-position: center top;
+        }
+      }
+
+      .hero h1 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-size: clamp(28px, 5vw, 50px); /* Adjusts size based on screen */
+      }
+
+      .hero p {
+        margin-top: 10px;
+        font-size: 18px;
+      }
+
+      /* NAVIGATION */
+
+      nav {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        padding: 10px 15px;
+        background: rgba(0, 74, 173, 0.85);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        flex-wrap: wrap;
+      }
+
+      /* NAV LINKS */
+      nav a {
+        position: relative;
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        padding: 8px 16px;
+        border-radius: 25px;
+        font-size: 14px;
+        transition: 0.3s ease;
+      }
+
+      /* HOVER EFFECT (Glow underline) */
+      nav a::after {
+        content: "";
+        position: absolute;
+        bottom: 4px;
+        left: 50%;
+        width: 0%;
+        height: 2px;
+        background: var(--accent-color);
+        transition: 0.3s;
+        transform: translateX(-50%);
+      }
+
+      nav a:hover::after {
+        width: 60%;
+      }
+
+      nav a:hover {
+        color: var(--accent-color);
+      }
+
+      /* ACTIVE BUTTON STYLE */
+      nav a.active {
+        background: var(--accent-color);
+        color: black;
+        box-shadow: 0 0 10px rgba(255, 204, 0, 0.6);
+      }
+
+      /* CONTAINER */
+
+      .container {
+        width: 92%; /* Slightly wider for mobile */
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px 0;
+      }
+
+      /* SECTION CARD */
+
+      .section {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-radius: 20px;
+        padding: 20px;
+        margin-bottom: 25px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        transition: 0.4s;
+      }
+
+      .section:hover {
+        transform: translateY(-8px) scale(1.01);
+      }
+
+      .facility-list li {
+        padding: 8px;
+        list-style: none;
+        border-bottom: 1px solid #eee;
+        transition: 0.3s;
+      }
+
+      .facility-list li:hover {
+        padding-left: 15px;
+        color: var(--main-color);
+      }
+
+      .section:hover {
+        transform: translateY(-6px);
+      }
+
+      .section h2 {
+        color: var(--main-color);
+        margin-bottom: 10px;
+        font-size: 22px;
+      }
+
+      /* Achievement Section */
+      .stats-section {
+        padding: 40px 10px;
+        text-align: center;
+      }
+
+      .stats-section h2 {
+        font-size: 28px;
+        margin-bottom: 30px;
+      }
+
+      /* --- NEW REPLACEMENT CODE --- */
+
+/* Wrapper to align the dials side-by-side or stacked */
+.achievement-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+/* The Circular Dial Body */
+.dial-card {
+  background: rgba(255, 255, 255, 0.9);
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  border: 2px solid #e2e8f0;
+  transition: transform 0.3s ease;
+}
+
+/* Hover Effect */
+.dial-card:hover { 
+  transform: translateY(-5px); 
+}
+
+/* The Professional Rotating Ring */
+.dial-card::before {
+  content: '';
+  position: absolute;
+  inset: -5px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top: 3px solid var(--main-color); /* Uses your school's blue */
+  animation: rotateRing 4s linear infinite;
+}
+
+/* Animation Logic */
+@keyframes rotateRing { 
+  from { transform: rotate(0deg); } 
+  to { transform: rotate(360deg); } 
+}
+
+/* Dial Text Styling */
+.dial-card .number { 
+  font-size: 32px; 
+  font-weight: 800; 
+  color: var(--main-color); 
+}
+
+.dial-card .label { 
+  font-size: 11px; 
+  font-weight: 600; 
+  text-transform: uppercase; 
+  color: #64748b; 
+  margin-top: 5px; 
+}
+
+/* Mobile Responsiveness for Dials */
+@media (max-width: 600px) {
+  .dial-card { 
+    width: 130px; 
+    height: 130px; 
+  }
+  .dial-card .number { 
+    font-size: 24px; 
+  }
+  .dial-card .label { 
+    font-size: 9px; 
+  }
+  .achievement-wrapper { 
+    gap: 15px; 
+  }
+}
+
+      /* GALLERY */
+
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(
+          auto-fit,
+          minmax(150px, 1fr)
+        ); /* Better sizing for mobile */
+        gap: 10px;
+      }
+
+      .gallery img {
+        width: 100%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        border-radius: 12px;
+        transition: 0.4s;
+        cursor: pointer;
+      }
+
+      .gallery img:hover {
+        transform: scale(1.1);
+        filter: brightness(1.1);
+      }
+
+      /* FOOTER */
+
+      footer {
+        background: var(--main-color);
+        color: white;
+        text-align: center;
+        padding: 20px;
+        margin-top: 30px;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Social Container */
+      .social-container {
+        position: fixed;
+        right: 15px;
+        bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        z-index: 999;
+      }
+
+      .social-container a {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        color: white;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        transition: 0.3s;
+      }
+
+      .social-container a:hover {
+        transform: scale(1.15);
+      }
+
+      .facebook {
+        background: #1877f2;
+      }
+      .youtube {
+        background: #ff0000;
+      }
+      .twitter {
+        background: #1da1f2;
+      }
+      .phone {
+        background: #28a745;
+      }
+      .email {
+        background: #ff9800;
+      }
+
+      @media (max-width: 600px) {
+        .social-container {
+          right: 10px;
+          bottom: 15px;
+          gap: 10px;
+        }
+
+        .social-container a {
+          width: 35px; /* smaller */
+          height: 35px;
+          font-size: 14px;
+        }
+      }
+
+      /* Staff Quotes */
+      .section-Quotes {
+        text-align: center;
+        padding: 30px 15px;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      .section-title {
+        text-align: center;
+        padding: 20px 10px;
+        font-size: 24px;
+        color: #004aad;
+        font-weight: bold;
+      }
+
+      /* Principal Section */
+      .principal-section {
+        display: flex;
+        justify-content: center;
+        padding: 0 15px;
+        margin-bottom: 30px;
+      }
+
+      .principal-card {
+        background: #fff;
+        border-radius: 20px;
+        text-align: center;
+        padding: 20px;
+        width: 100%;
+        max-width: 280px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .principal-card img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 5px solid #004aad;
+        margin-bottom: 15px;
+      }
+
+      /* Teachers Grid */
+      .staff-container {
+        display: grid;
+        grid-template-columns: repeat(
+          auto-fit,
+          minmax(140px, 1fr)
+        ); /* Two cards per row on mobile */
+        gap: 15px;
+        padding: 15px;
+      }
+
+      .staff-card {
+        background: #fff;
+        border-radius: 15px;
+        text-align: center;
+        padding: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .staff-card img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #004aad;
+        margin-bottom: 10px;
+      }
+
+      .staff-name {
+        font-size: 16px;
+        font-weight: bold;
+        color: #333;
+      }
+
+      .staff-role {
+        font-size: 12px;
+        color: #777;
+      }
+
+      /* MOBILE SPECIFIC OVERRIDES */
+      @media (max-width: 600px) {
+        .triangle {
+          height: auto;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 15px;
+        }
+        .card {
+          position: static;
+          transform: none;
+          width: 80%;
+        }
+        svg {
+          display: none; /* Hide triangle lines on mobile for clarity */
+        }
+        .hero h1 {
+          margin-top: 10px;
+        }
+        nav a {
+          flex: 1 1 30%; /* Makes nav buttons wrap nicely */
+          padding: 6px;
+          font-size: 12px;
+        }
+      }
+
+      .fade-in {
+        opacity: 0;
+        animation: fadeIn 2s ease-in forwards;
+      }
+
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+        }
+      }
+
+      .slide-up {
+        color: #fff;
+        text-align: center;
+        animation: flicker 1.5s infinite alternate;
+      }
+
+      @keyframes flicker {
+        0% {
+          opacity: 0.5;
+          text-shadow: 0 0 5px #fff;
+        }
+        100% {
+          opacity: 1;
+          text-shadow: 0 0 10px #00c6ff;
+        }
+      }
+
+      .glow-btn {
+        background: linear-gradient(45deg, #ff0000, #ff7300);
+        color: white;
+        padding: 12px 25px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: bold;
+        box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+        transition: 0.3s;
+        display: inline-block;
+      }
+
+      .glow-btn:hover {
+        transform: scale(1.08);
+        box-shadow: 0 0 25px rgba(255, 0, 0, 1);
+      }
+
+      /* ===== IPHS PROFESSIONAL GLASS-SHIELD LOADER ===== */
+#loader {
+    position: fixed;
+    inset: 0;
+    background: #ffffff; /* Clean professional white */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.loader-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* The Central Logo Glass Disk */
+.logo-disk {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    box-shadow: 0 8px 32px rgba(0, 74, 173, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    animation: diskPulse 3s ease-in-out infinite;
+}
+
+.logo-disk img {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+}
+
+/* Professional Orbital Rings */
+.orbit {
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    animation: rotate 3s linear infinite;
+}
+
+.orbit-saffron {
+    width: 140px;
+    height: 140px;
+    border-top: 3px solid #FF9933;
+    animation-duration: 2s;
+}
+
+.orbit-green {
+    width: 170px;
+    height: 170px;
+    border-bottom: 3px solid #138808;
+    animation-duration: 4s;
+    animation-direction: reverse;
+}
+
+.orbit-blue {
+    width: 195px;
+    height: 195px;
+    border-left: 1px dashed #004aad;
+    opacity: 0.3;
+    animation-duration: 8s;
+}
+
+/* Animations */
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes diskPulse {
+    0%, 100% { transform: scale(1); box-shadow: 0 8px 32px rgba(0, 74, 173, 0.15); }
+    50% { transform: scale(1.05); box-shadow: 0 12px 40px rgba(0, 74, 173, 0.25); }
+}
+
+/* Loading Text */
+.loader-text {
+    margin-top: 40px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.loader-text h2 {
+    color: #004aad;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.loader-text p {
+    color: #666;
+    font-size: 11px;
+    letter-spacing: 4px;
+    margin-top: 5px;
+    text-transform: uppercase;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    .loader-container { transform: scale(0.8); }
+    .loader-text h2 { font-size: 14px; }
+    .loader-text p { font-size: 9px; }
+}
+      @media (max-width: 600px) {
+        nav {
+          overflow-x: auto;
+          flex-wrap: nowrap;
+          justify-content: flex-start;
+        }
+
+        nav a {
+          flex-shrink: 0;
+          font-size: 13px;
+          padding: 6px 12px;
+        }
+      }
+      
+      
+      
+      
+      :root {
+            --anim-duration: 16s; /* Total cycle for 4 images */
+            --slide-count: 4;
+            --per-slide: 4s; /* 16 / 4 */
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+      .premium-container {
+       position: relative;
+       width: 95%;           /* Keeps it from touching the screen edges */
+       max-width: 900px;     /* Limits size on desktop */
+       height: 500px;
+       overflow: hidden;
+       border-radius: 30px;
+       background: #000;
+       box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+    
+       /* ADD THESE TWO LINES TO CENTER IT */
+       margin-left: auto;
+       margin-right: auto;
+       display: block; 
+       }
+      
+      /* Animated Progress Bar */
+        .progress-bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(to right, #ffd700, #fff); /* Gold/White school colors */
+            z-index: 100;
+            width: 0%;
+            animation: progress var(--per-slide) linear infinite;
+        }
+
+        @keyframes progress {
+            0% { width: 0%; }
+            100% { width: 100%; }
+        }
+
+        .slide {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: scale(1.2) rotateY(15deg);
+            transition: none;
+            animation: stackFlip var(--anim-duration) infinite;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.85);
+        }
+
+        /* Premium 3D Animation */
+        @keyframes stackFlip {
+            0% { 
+                opacity: 0; 
+                visibility: visible; 
+                transform: scale(1.2) translateY(20px) rotateY(15deg); 
+            }
+            5%, 25% { 
+                opacity: 1; 
+                transform: scale(1) translateY(0) rotateY(0deg); 
+            }
+            30% { 
+                opacity: 0; 
+                transform: scale(0.9) translateY(-20px) rotateX(10deg); 
+            }
+            100% { opacity: 0; }
+        }
+
+        /* Content / Text Overlay */
+        .content {
+            position: absolute;
+            bottom: 40px;
+            left: 40px;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            z-index: 10;
+            max-width: 80%;
+            transform: translateY(20px);
+            animation: textUp var(--anim-duration) infinite;
+        }
+
+        @keyframes textUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            5%, 25% { opacity: 1; transform: translateY(0); }
+            30%, 100% { opacity: 0; transform: translateY(-20px); }
+        }
+
+        .content h2 { font-size: 2.5rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; }
+        .content p { font-size: 1.1rem; background: rgba(0,0,0,0.3); display: inline-block; padding: 5px 15px; border-radius: 5px; }
+
+        /* Staggered Timings */
+        .slide:nth-child(2) { animation-delay: 4s; }
+        .slide:nth-child(2) .content { animation-delay: 4s; }
+
+        .slide:nth-child(3) { animation-delay: 8s; }
+        .slide:nth-child(3) .content { animation-delay: 8s; }
+
+        .slide:nth-child(4) { animation-delay: 12s; }
+        .slide:nth-child(4) .content { animation-delay: 12s; }
+
+        /* Responsive Mobile Code */
+        @media (max-width: 768px) {
+            .premium-container { height: 350px; border-radius: 20px; }
+            .content { bottom: 20px; left: 20px; }
+            .content h2 { font-size: 1.5rem; }
+            .content p { font-size: 0.9rem; }
+        }
+        
+        
+      
+      
+    </style>
+  </head>
+
+  <body>
+    <div id="loader">
+    <div class="loader-container">
+        <div class="orbit orbit-saffron"></div>
+        <div class="orbit orbit-green"></div>
+        <div class="orbit orbit-blue"></div>
+        
+        <div class="logo-disk">
+            <img src="https://sabannamaster.github.io/IPHS/IPHSlogo%20(1).png" alt="IPHS Logo">
+        </div>
+    </div>
+    
+    <div class="loader-text">
+        <h2>Indian Primary And High School</h2>
+        <p>Building Futures Since 2010</p>
+    </div>
+</div>
+    <div class="hero">
+      <div class="fade-in">
+        <img
+          src="IPHSlogo (1).png"
+          alt="School Logo"
+          class="logo"
+        />
+        <h1>Indian Primary And High School</h1>
+      </div>
+
+      <div class="slide-up">
+        <p>Devarachikkanahalli, Bengaluru</p>
+      </div>
+    </div>
+    <nav>
+      <a href="Enquiry.html" target="_blank" rel="noopener noreferrer">✉ Enquire</a>
+      <a href="NoticeBoard.html" target="_blank" rel="noopener noreferrer">📢 Notice</a>
+      <a href="#about">🏫 About</a>
+      <a href="#facilities">🏢 Facilities</a>
+      <a href="#gallery">📸 Gallery</a>
+      <a href="https://maps.app.goo.gl/LbD3jTtJp2p1k49r8" target="_blank" rel="noopener noreferrer">📍 Location</a>
+    </nav>
+
+    <div class="admission-container">
+    <div class="admission-item">
+        <div class="gold-badge">Admissions 2026-27</div>
+        
+        <div class="admission-ticker">
+            <span>Limited Seats Available for Class 1st to 10th • Entrance Exam on April 15th • Scholarships Available • Registration Closing Soon! • </span>
+        </div>
+
+        <a href="Enquiry.html" target="_blank" rel="noopener noreferrer" class="apply-now">APPLY NOW</a>
+    </div>
+</div>
+
+
+        
+<div class="premium-container">
+    <div class="progress-bar"></div>
+
+    <div class="slide">
+        <img src="Schoolevent1.jpg" alt="School">
+        <div class="content">
+            <h2>A day of devotion</h2>
+            <p>A spiritual experience that filled with peace and positivity.</p>
+        </div>
+    </div>
+
+    <div class="slide">
+        <img src="Schoolevent2.jpg" alt="Arts">
+        <div class="content">
+            <h2>School Event</h2>
+            <p>A day filled with joy, performances, and achievements.</p>
+        </div>
+    </div>
+
+    <div class="slide">
+        <img src="Schoolevent3.jpg" alt="Sports">
+        <div class="content">
+            <h2>Strong girls, bright future.</h2>
+            <p>Proud moment as our Scouts & Guides received their certifications.</p>
+        </div>
+    </div>
+
+    <div class="slide">
+        <img src="Schoolevent4.jpg" alt="Science">
+        <div class="content">
+            <h2>From camp to campus.</h2>
+            <p>Celebrating completion and new beginning of students journey.</p>
+        </div>
+    </div>
+</div>
+        
+
+    <div class="container">
+      <div class="section" id="about">
+        <h2>About Our School</h2>
+        <p>
+          Indian Primary And High School is located in Bommanahalli, Bengaluru.
+          The school provides quality education from pre-primary to high school
+          level and focuses on academic excellence and discipline.
+        </p>
+
+        <section class="stats-section">
+          <h2>Our Achievements</h2>
+          <div class="achievement-wrapper">
+    <div class="dial-card">
+        <span class="number counter" data-target="1978">0</span>
+        <span class="label">Established</span>
+    </div>
+    <div class="dial-card">
+        <span class="number"><span class="counter" data-target="1000">0</span>+</span>
+        <span class="label">Students</span>
+    </div>
+    <div class="dial-card">
+        <span class="number"><span class="counter" data-target="22">0</span>+</span>
+        <span class="label">Expert Staff</span>
+    </div>
+</div>
+        </section>
+      </div>
+
+      <div class="section" id="facilities">
+        <h2>School Facilities</h2>
+        <ul class="facility-list">
+          <li>💻 Digital Classrooms</li>
+          <li>🖥 Computer Lab</li>
+          <li>📚 Library</li>
+          <li>⚽ Sports Ground</li>
+          <li>💧 Drinking Water Facility</li>
+          <li>🚻 Separate Toilets</li>
+        </ul>
+      </div>
+
+      <div class="section" id="gallery">
+        <h2>School Gallery</h2>
+        <div class="section" id="youtube">
+          <p>Watch our school activities on YouTube.</p>
+          <div style="text-align: center; margin-top: 15px">
+            <a
+              href="https://youtube.com/@indianprimaryandhighschool8581"
+              target="_blank"
+              class="glow-btn"
+            >
+              ▶ Visit YouTube
+            </a>
+          </div>
+        </div>
+
+        <div class="gallery">
+          <img src="school1.jpg.png" />
+          <img src="school2.jpg.png" />
+          <img src="school3.jpg.png" />
+          <img src="school4.jpg.jpg" />
+        </div>
+      </div>
+
+      <div class="section" id="contact">
+        <h2>Contact</h2>
+        <p>📍 Devarachikkanahalli Begur Rd, Bommanahalli, Bengaluru</p>
+        <p>📞 +91 9844182385</p>
+        <br />
+        <div
+          class="section"
+          style="background: #f9f9f9; box-shadow: none; border: 1px solid #ddd"
+        >
+          <h3>Admissions Open</h3>
+          <p>Academic year 2026–2027. Pre-Primary to High School.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section-Quotes">
+      Our school is led by a visionary Principal and supported by a team of
+      dedicated teachers committed to quality education.
+      <br>
+      "With years of experience and a passion for education,
+      Mrs. Roopa Devaraj leads our school with a vision to empower every student.
+      She believes that every child has the potential to achieve greatness."
+    </div>
+
+    <div class="section-title">School Management</div>
+
+    <div class="principal-section">
+      <div class="principal-card">
+        <img src="principal.png" alt="Principal" />
+        <div class="staff-name">Mrs. Roopa Devaraj</div>
+        <div class="staff-role">Principal</div>
+      </div>
+    </div>
+
+    <div class="staff-container">
+      <div class="staff-card">
+        <img src="https://via.placeholder.com/150" />
+        <div class="staff-name">Mrs. Anitha</div>
+        <div class="staff-role">Maths</div>
+      </div>
+      <div class="staff-card">
+        <img src="https://via.placeholder.com/150" />
+        <div class="staff-name">Mr. Ravi</div>
+        <div class="staff-role">Science</div>
+      </div>
+      <div class="staff-card">
+        <img src="https://via.placeholder.com/150" />
+        <div class="staff-name">Ms. Priya</div>
+        <div class="staff-role">English</div>
+      </div>
+      <div class="staff-card">
+        <img src="https://via.placeholder.com/150" />
+        <div class="staff-name">Mr. Suresh</div>
+        <div class="staff-role">Social</div>
+      </div>
+    </div>
+
+    <div class="social-container" id="Enquire">
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      />
+      <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
+      <a href="tel:+919844182385" class="phone"><i class="fas fa-phone"></i></a>
+      <a href="mailto:info@school.edu" class="email"
+        ><i class="fas fa-envelope"></i
+      ></a>
+    </div>
+
+    <footer>
+      <p>© 2026 Indian Primary And High School</p>
+    </footer>
+<script>
+  // 1. Define the counter function but DON'T run it yet
+  const runCounters = () => {
+    const counters = document.querySelectorAll(".counter");
+    counters.forEach((counter) => {
+      let target = +counter.getAttribute("data-target");
+      let count = 0;
+      let update = () => {
+        let speed = target / 100;
+        count += speed;
+        if (count < target) {
+          counter.innerText = Math.floor(count);
+          requestAnimationFrame(update);
+        } else {
+          counter.innerText = target;
+        }
+      };
+      update();
+    });
+  };
+
+  const revealElements = document.querySelectorAll(".section, .staff-card, .principal-card");
+
+  const revealOnScroll = () => {
+    const triggerBottom = window.innerHeight * 0.85;
+    revealElements.forEach((el) => {
+      const boxTop = el.getBoundingClientRect().top;
+      if (boxTop < triggerBottom) {
+        el.style.opacity = "1";
+        el.style.transform = "translateY(0)";
+      }
+    });
+  };
+
+  window.addEventListener("scroll", revealOnScroll);
+
+  // Navigation Active Link Logic
+  const sections = document.querySelectorAll("section, .section");
+  const navLinks = document.querySelectorAll("nav a");
+
+  window.addEventListener("scroll", () => {
+    let current = "";
+    sections.forEach((sec) => {
+      const sectionTop = sec.offsetTop - 100;
+      if (pageYOffset >= sectionTop) {
+        current = sec.getAttribute("id");
+      }
+    });
+
+    navLinks.forEach((a) => {
+      a.classList.remove("active");
+      if (a.getAttribute("href") === "#" + current) {
+        a.classList.add("active");
+      }
+    });
+  });
+
+  // 2. LOADER LOGIC (The most important part)
+  window.addEventListener("load", function() {
+    const loader = document.getElementById("loader");
+    
+    // Wait 3 seconds for the loader
+    setTimeout(() => {
+      loader.style.opacity = "0";
+      
+      // Wait for fade out animation to finish (800ms)
+      setTimeout(() => {
+        loader.style.display = "none";
+        
+        // NOW start the numbers and check scroll position
+        runCounters(); 
+        revealOnScroll();
+      }, 800);
+      
+    }, 3000); 
+  });
+</script>
+  </body>
+</html>
